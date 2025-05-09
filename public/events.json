@@ -1,0 +1,63 @@
+[
+    {
+      "id": "event_001",
+      "name": "Tech Innovators Conference 2025",
+      "thumbnail": "https://i.ibb.co.com/01YsDQK/vrc-convention-pedda-amberpet-rangareddy-convention-halls-rlkrmg62u5.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "Dhaka Convention Center, Dhaka",
+      "entry_fee": 500,
+      "description": "An exclusive gathering of tech leaders and innovators from around the globe."
+    },
+    {
+      "id": "event_002",
+      "name": "Green Earth Sustainability Summit",
+      "thumbnail": "https://i.ibb.co.com/WvLvfLnL/6cf661-d754d750b5774bd2899824eabb6181af-mv2.jpg",
+      "category": "Environment",
+      "date": "2025-06-01",
+      "location": "Sylhet Green Park, Sylhet",
+      "entry_fee": 300,
+      "description": "A forum for discussing innovative solutions for climate change and sustainability."
+    },
+    {
+      "id": "event_003",
+      "name": "Startup Pitch Battle 2025",
+      "thumbnail": "https://i.ibb.co.com/xKkKzNj7/6cf661-8e7043c31a42454abe41d7974a0ef995-mv2.jpg",
+      "category": "Business",
+      "date": "2025-07-10",
+      "location": "Chattogram Startup Hub, Chattogram",
+      "entry_fee": 1000,
+      "description": "Top startups compete to pitch their ideas to investors and industry leaders."
+    },
+    {
+      "id": "event_004",
+      "name": "Bangladesh Literature Fest",
+      "thumbnail": "https://i.ibb.co.com/M5Rht9X5/images-1.jpg",
+      "category": "Literature",
+      "date": "2025-08-20",
+      "location": "Bangla Academy, Dhaka",
+      "entry_fee": 200,
+      "description": "Celebrate literature with authors, poets, and readers from across the country."
+    },
+    {
+      "id": "event_005",
+      "name": "Digital Art & Gaming Expo",
+      "thumbnail": "https://i.ibb.co.com/4Z09TwRP/United-Convention-Hall-1-scaled.jpg",
+      "category": "Entertainment",
+      "date": "2025-09-05",
+      "location": "BICC, Dhaka",
+      "entry_fee": 800,
+      "description": "An exciting event showcasing gaming tournaments, digital art, and VR demos."
+    },
+    {
+      "id": "event_006",
+      "name": "Bangladesh Food Carnival",
+      "thumbnail": "https://i.ibb.co.com/VYc65MTB/dc.jpg",
+      "category": "Food",
+      "date": "2025-10-12",
+      "location": "Cox’s Bazar Sea View Park",
+      "entry_fee": 250,
+      "description": "Taste cuisines from every corner of Bangladesh in a beachside food festival."
+    }
+  ]
+  
