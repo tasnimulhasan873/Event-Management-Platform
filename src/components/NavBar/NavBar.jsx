@@ -44,7 +44,7 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <Link className="btn btn-ghost text-xl" to="/">Event Explorer</Link>
+        <Link className="btn btn-ghost text-xl" to="/">Eventify</Link>
       </div>
 
       {/* Center links (hidden on small screens) */}

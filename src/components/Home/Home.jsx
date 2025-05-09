@@ -57,7 +57,6 @@ const Home = () => {
                 <p className="text-sm">{event.location}</p>
                 <p className="font-semibold">Entry Fee: ৳{event.entry_fee}</p>
                 <div className="card-actions justify-end">
-                  {/* ✅ Corrected View More link */}
                   <Link to={`/events/${event.id}`} className="btn btn-primary btn-sm">View More</Link>
                 </div>
               </div>
