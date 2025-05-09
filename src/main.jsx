@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router"; 
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Root from "./Layouts/Root.jsx";
 import Home from "./components/Home/Home.jsx";
 import Login from "./components/Login/Login.jsx";
@@ -11,11 +11,13 @@ import AuthProvider from "./contexts/AuthProvider.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import PrivateRoute from "./Routes/PrivateRoutes.jsx";
-import { HelmetProvider } from "react-helmet-async"; 
+import { HelmetProvider } from "react-helmet-async";
 import Footer from "./components/Footer/Footer.jsx";
-import Terms from "./components/Importants/terms.jsx";
 import Privacy from "./components/Importants/Privacy.jsx";
 import Contact from "./components/Importants/Contact.jsx";
+import EventPage from "./components/EventPage/EventPage.jsx"; 
+import Terms from "./components/Importants/terms.jsx";
+import MyReservations from "./components/EventPage/MyReservations.jsx";
 
 
 const router = createBrowserRouter([
@@ -26,11 +28,11 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
-      {path:"/footer", Component: Footer},
+      { path: "/footer", element: <Footer /> },
       { path: "/terms", element: <Terms /> },
       { path: "/privacy", element: <Privacy /> },
       { path: "/contact", element: <Contact /> },
-     
+
       {
         path: "/profile",
         element: (
@@ -39,6 +41,25 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+
+
+      {
+        path: "/events/:id",
+        element: (
+          <PrivateRoute>
+            <EventPage />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my-reservations",
+        element: (
+          <PrivateRoute>
+            <MyReservations />
+          </PrivateRoute>
+        ),
+      },
+
       { path: "*", element: <NotFound /> },
     ],
   },

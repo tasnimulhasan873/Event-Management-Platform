@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+import { Link } from 'react-router'; 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -53,7 +54,8 @@ const Home = () => {
                 <p className="text-sm">{event.location}</p>
                 <p className="font-semibold">Entry Fee: ৳{event.entry_fee}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary btn-sm">View More</button>
+                  {/* ✅ Corrected View More link */}
+                  <Link to={`/events/${event.id}`} className="btn btn-primary btn-sm">View More</Link>
                 </div>
               </div>
             </div>
@@ -79,7 +81,8 @@ const Home = () => {
           <div className="md:ml-6 mt-4 md:mt-0">
             <h3 className="text-xl font-bold">Bangladesh Food Carnival</h3>
             <p className="mt-2">Enjoy a massive food fair at the beautiful beachside of Cox’s Bazar.</p>
-            <button className="btn btn-secondary mt-3">Explore More</button>
+            {/* ❌ You used event.id here outside a loop – so replaced with a default one */}
+            <Link to={`/events/1`} className="btn btn-primary btn-sm mt-3">View More</Link>
           </div>
         </div>
       </div>
