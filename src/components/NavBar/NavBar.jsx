@@ -1,36 +1,38 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router';
+import React, { use } from 'react';
+import { Link, NavLink } from 'react-router'; 
 import './NavBar.css';
-import { use } from 'react';
 import { AuthContext } from '../../contexts/AuthC';
 
-
-
 const NavBar = () => {
-const {user,signoutUser} = use(AuthContext);
-console.log(user);
-const handleSignOut = () => {
+  const { user, signoutUser } = use(AuthContext);
+
+  const handleSignOut = () => {
     signoutUser();
   };
 
   const links = (
     <>
       <li><NavLink to="/">Home</NavLink></li>
-      {!user && <>
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li>
-      </>}
-      {user && <>
-        <li><NavLink to="/profile">Profile</NavLink></li>
-      </>}
+      {!user && (
+        <>
+          <li><NavLink to="/login">Login</NavLink></li>
+          <li><NavLink to="/register">Register</NavLink></li>
+        </>
+      )}
+      {user && (
+        <>
+          <li><NavLink to="/profile">Profile</NavLink></li>
+        </>
+      )}
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-4">
+      {/* Left side */}
       <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div className="dropdown lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none"
               viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -43,19 +45,40 @@ const handleSignOut = () => {
         </div>
         <Link className="btn btn-ghost text-xl" to="/">Event Explorer</Link>
       </div>
+
+      {/* Center links (hidden on small screens) */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
           {links}
         </ul>
       </div>
-      <div className="navbar-end">
+
+      {/* Right side - user info and buttons */}
+      <div className="navbar-end flex items-center gap-4">
         {user ? (
           <>
-            <span className="mr-2">{user.email}</span>
-            <button onClick={handleSignOut} className="btn">Sign Out</button>
+            <div className="text-right hidden sm:block">
+              <p className="text-sm font-semibold">{user.displayName || 'User'}</p>
+              <p className="text-xs text-gray-500">{user.email}</p>
+            </div>
+            {user.photoURL && (
+              <img
+                src={user.photoURL}
+                alt="Profile"
+                className="w-8 h-8 rounded-full border"
+              />
+            )}
+            <button
+              onClick={handleSignOut}
+              className="btn btn-outline btn-sm btn-error rounded-full px-4"
+            >
+              Sign Out
+            </button>
           </>
         ) : (
-          <Link to="/login" className="btn">Login</Link>
+          <Link to="/login" className="btn btn-primary btn-sm rounded-full px-4">
+            Login
+          </Link>
         )}
       </div>
     </div>
