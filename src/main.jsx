@@ -1,24 +1,29 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
+
+import App from "./App.jsx";
 import Root from "./Layouts/Root.jsx";
 import Home from "./components/Home/Home.jsx";
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
-import AuthProvider from "./contexts/AuthProvider.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
-import PrivateRoute from "./Routes/PrivateRoutes.jsx";
-import { HelmetProvider } from "react-helmet-async";
 import Footer from "./components/Footer/Footer.jsx";
+
+
 import Privacy from "./components/Importants/Privacy.jsx";
 import Contact from "./components/Importants/Contact.jsx";
-import EventPage from "./components/EventPage/EventPage.jsx"; 
-import Terms from "./components/Importants/terms.jsx";
+
+import EventPage from "./components/EventPage/EventPage.jsx";
 import MyReservations from "./components/EventPage/MyReservations.jsx";
 
+import AuthProvider from "./contexts/AuthProvider.jsx";
+import PrivateRoute from "./Routes/PrivateRoutes.jsx";
+
+import { HelmetProvider } from "react-helmet-async";
+import Terms from "./components/Importants/terms.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,8 +46,6 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-
-
       {
         path: "/events/:id",
         element: (

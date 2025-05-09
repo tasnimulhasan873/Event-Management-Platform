@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   updateProfile,
+  sendPasswordResetEmail,
 } from 'firebase/auth';
 import { auth } from '../firebase.init';
 
@@ -33,6 +34,12 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  // Forgot password
+  const forgetpass = (email) => {
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
+  };
+
   // Google Sign-In
   const googleProvider = new GoogleAuthProvider();
   const googleSignin = () => {
@@ -40,7 +47,7 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  // Update user profile 
+  // Update user profile
   const updateUserProfile = (name, photoURL) => {
     if (auth.currentUser) {
       return updateProfile(auth.currentUser, {
@@ -48,7 +55,7 @@ const AuthProvider = ({ children }) => {
         photoURL: photoURL,
       });
     } else {
-      return Promise.reject("No user is currently signed in.");
+      return Promise.reject(new Error("No user is currently signed in."));
     }
   };
 
@@ -70,6 +77,7 @@ const AuthProvider = ({ children }) => {
     signoutUser,
     googleSignin,
     updateUserProfile,
+    forgetpass, 
   };
 
   return (
