@@ -75,7 +75,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* === Featured Location Section === */}
       <div>
         <h2 className="text-2xl font-bold mb-4">Featured Location: Cox’s Bazar</h2>
         <div className="bg-base-200 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center">
@@ -83,7 +82,7 @@ const Home = () => {
           <div className="md:ml-6 mt-4 md:mt-0">
             <h3 className="text-xl font-bold">Bangladesh Food Carnival</h3>
             <p className="mt-2">Enjoy a massive food fair at the beautiful beachside of Cox’s Bazar.</p>
-            {/* ❌ You used event.id here outside a loop – so replaced with a default one */}
+      
             <Link to={`/events/1`} className="btn btn-primary btn-sm mt-3">View More</Link>
           </div>
         </div>
