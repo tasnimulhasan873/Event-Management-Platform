@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router';
 
 const EventPage = () => {
@@ -29,7 +30,6 @@ const EventPage = () => {
       userEmail: formData.email,
     };
 
-    // Save to localStorage (append to array)
     const existing = JSON.parse(localStorage.getItem('reservations')) || [];
     localStorage.setItem('reservations', JSON.stringify([...existing, reservation]));
 
@@ -40,7 +40,12 @@ const EventPage = () => {
   if (!event) return <p className="text-center">Loading event...</p>;
 
   return (
+    
     <div className="max-w-4xl mx-auto p-6 space-y-6">
+        <Helmet>
+        <title>{event.name} - Event Details</title> 
+      </Helmet>
+      
       <img src={event.thumbnail} alt={event.name} className="w-full h-80 object-cover rounded" />
       <h1 className="text-3xl font-bold">{event.name}</h1>
       <p className="text-lg">{event.description}</p>

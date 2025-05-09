@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router'; 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -17,7 +18,9 @@ const Home = () => {
 
   return (
     <div className="space-y-10 px-4 py-6">
-      
+       <Helmet>
+        <title>Home - Upcoming Events</title> 
+      </Helmet>
       {/* === Slider Section === */}
       <div>
         <Swiper
