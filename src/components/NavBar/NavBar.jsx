@@ -47,14 +47,13 @@ const NavBar = () => {
         <Link className="btn btn-ghost text-xl" to="/">Eventify</Link>
       </div>
 
-      {/* Center links (hidden on small screens) */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">
           {links}
         </ul>
       </div>
 
-      {/* Right side - user info and buttons */}
+     
       <div className="navbar-end flex items-center gap-4">
         {user ? (
           <>

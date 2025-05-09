@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../contexts/AuthC';
 
 const MyProfile = () => {
-  const { user } = use(AuthContext); // Using experimental use()
+  const { user } = use(AuthContext); 
   const [name, setName] = useState('');
   const [photo, setPhoto] = useState('');
   const [success, setSuccess] = useState('');

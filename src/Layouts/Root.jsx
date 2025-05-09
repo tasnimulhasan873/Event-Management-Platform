@@ -8,9 +8,8 @@ import Footer from '../components/Footer/Footer';
 const Root = () => {
     return (
         <div>
-            {/* Navigation Bar */}
+           
             <NavBar />
-
             <main className="min-h-screen p-4">
                 <Outlet />
             </main>
