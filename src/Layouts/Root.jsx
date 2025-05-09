@@ -10,12 +10,10 @@ const Root = () => {
             {/* Navigation Bar */}
             <NavBar />
 
-            {/* Page Content */}
             <main className="min-h-screen p-4">
                 <Outlet />
             </main>
 
-            {/* Toast Notifications */}
             <ToastContainer position="top-center" />
         </div>
     );

@@ -4,12 +4,9 @@ import './NavBar.css';
 import { use } from 'react';
 import { AuthContext } from '../../contexts/AuthC';
 
-// import { AuthContext } from '../../contexts/AuthContext';
 
 
 const NavBar = () => {
-    // const userInfo = use(AuthContext);
-    // console.log(userInfo);
 const {user,signoutUser} = use(AuthContext);
 console.log(user);
 const handleSignOut = () => {
@@ -44,7 +41,7 @@ const handleSignOut = () => {
             {links}
           </ul>
         </div>
-        <Link className="btn btn-ghost text-xl" to="/">daisyUI</Link>
+        <Link className="btn btn-ghost text-xl" to="/">Event Explorer</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

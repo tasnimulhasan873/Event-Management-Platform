@@ -10,9 +10,9 @@ import Register from "./components/Register/Register.jsx";
 import AuthProvider from "./contexts/AuthProvider.jsx";
 
 import Profile from "./components/Profile/Profile.jsx";
-import NotFound from "./components/NotFound/NotFound.jsx"; // 404 page
+import NotFound from "./components/NotFound/NotFound.jsx";
 import PrivateRoute from "./Routes/PrivateRoutes.jsx";
-import { HelmetProvider } from "react-helmet-async"; //  Dynamic title support
+import { HelmetProvider } from "react-helmet-async"; //  
 
 const router = createBrowserRouter([
   {
