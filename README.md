@@ -65,7 +65,7 @@ npm run dev
 
   <h2>🔗 Relevant Links</h2>
   <ul>
-    <li>🔴 <strong>Live Website:</strong> <a href="(https://eventifybd.netlify.app/)" target="_blank" rel="noopener noreferrer">[https://your-deployed-site-url.com](https://eventifybd.netlify.app/)</a></li>
+    <li>🔴 <strong>Live Website:</strong> <a href="(https://eventifybd.netlify.app/)" target="_blank" rel="noopener noreferrer">(https://eventifybd.netlify.app/)</a></li>
     <li>💻 <strong>GitHub Repo:</strong> <a href="https://github.com/tasnimulhasan873/Event-management-platform" target="_blank" rel="noopener noreferrer">https://github.com/tasnimulhasan873/Event-management-platform</a></li>
   </ul>
 
