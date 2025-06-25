@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>🎉 Eventify – Event Management Platform</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Modern React-based event discovery and management platform in Bangladesh.">
 </head>
@@ -14,7 +14,7 @@
   <hr />
 
   <h2>🌐 Live Demo</h2>
-  <p>👉 <a href="[https://your-deployed-site-url.com](https://eventifybd.netlify.app/)" target="_blank" rel="noopener noreferrer">Visit Eventify</a></p>
+  <p>👉 <a href="(https://eventifybd.netlify.app/)" target="_blank" rel="noopener noreferrer">Visit Eventify</a></p>
 
   <hr />
 
@@ -65,8 +65,8 @@ npm run dev
 
   <h2>🔗 Relevant Links</h2>
   <ul>
-    <li>🔴 <strong>Live Website:</strong> <a href="https://your-deployed-site-url.com" target="_blank" rel="noopener noreferrer">https://your-deployed-site-url.com</a></li>
-    <li>💻 <strong>GitHub Repo:</strong> <a href="https://github.com/your-username/eventify-client" target="_blank" rel="noopener noreferrer">https://github.com/your-username/eventify-client</a></li>
+    <li>🔴 <strong>Live Website:</strong> <a href="(https://eventifybd.netlify.app/)" target="_blank" rel="noopener noreferrer">[https://your-deployed-site-url.com](https://eventifybd.netlify.app/)</a></li>
+    <li>💻 <strong>GitHub Repo:</strong> <a href="https://github.com/tasnimulhasan873/Event-management-platform" target="_blank" rel="noopener noreferrer">https://github.com/tasnimulhasan873/Event-management-platform</a></li>
   </ul>
 
   <hr />
